@@ -1,4 +1,4 @@
-package com.handakina.personal.project.protfolio.domain;
+package com.handakina.personal.project.portfolio.domain;
 
 
 import lombok.AllArgsConstructor;
