@@ -3,9 +3,14 @@
         "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
 <tiles-definitions>
 
-    <definition name="company-template" path="../jsp/layout/common-layout.jsp">
-        <put name="header" value="../jsp/layout/header.jsp" />
-        <put name="footer" value="../jsp/layout/footer.jsp" />
+    <definition name="portfolio-template" path="/jsp/layout/common-layout.jsp">
+        <put name="header" value="/jsp/layout/header.jsp" />
+        <put name="footer" value="/jsp/layout/footer.jsp" />
     </definition>
+
+    <definition name="home-page" extends="portfolio-template">
+
+    </definition>
+
 
 </tiles-definitions>

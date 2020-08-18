@@ -1,16 +1,21 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: handakinafuchea
-  Date: 8/16/20
-  Time: 12:36 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@ taglib prefix="tiles" uri="http://struts.apache.org/tags-tiles" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-</body>
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css"/>
+    <link type="text/css" rel="stylesheet" href="<c:url value="/styles/layout/global.css" />" />
+    <title>Hello</title>
+    </head>
+    <body>
+
+        <tiles:insert attribute="header"/>
+
+        <tiles:insert attribute="body" ignore="true"/>
+
+        <tiles:insert attribute="footer"/>
+
+    </body>
 </html>
