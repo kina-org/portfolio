@@ -1,0 +1,24 @@
+
+.section-div-1{
+    background-color: #0f1742;
+    width: 100%;
+    text-align: center;
+}
+
+.home-section-margin{
+    width: 5%;
+    display: inline-block;
+    background-color: #FF111E76;
+}
+.home-section-major{
+    width: 50%;
+    display: inline-block;
+    background-color: #10554f;
+}
+.home-section-minor{
+    width: 45%;
+    display: inline-block;
+    background-color: #10554f;
+
+}
+

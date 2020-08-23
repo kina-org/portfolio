@@ -9,7 +9,8 @@
     </definition>
 
     <definition name="home-page" extends="portfolio-template">
-
+        <put name="styleList" value="/jsp/pages/home-styles.jsp"/>
+        <put name="body" value="/jsp/pages/home.jsp"/>
     </definition>
 
 
