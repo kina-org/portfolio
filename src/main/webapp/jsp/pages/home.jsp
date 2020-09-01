@@ -40,7 +40,7 @@
                     <p class="title">
                         I'm Handakina Fuchea
                     </p>
-                    <p> <strong>Java Developer</strong> *  <strong>ReactJS</strong> * <strong>Angular</strong> * <strong>AWS</strong></p>
+                    <p> <strong>Java Developer</strong>  <i class="fas fa-star"></i>  <strong>ReactJS</strong>  <i class="fas fa-star"></i>  <strong>Angular</strong>  <i class="fas fa-star"></i>  <strong>AWS</strong></p>
                     <hr/>
                     <p>
                         Curabitur accumsan turpis pharetra augue tincidunt blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
@@ -302,7 +302,8 @@
                     <header class="card-header">
                         <p class="card-header-title">
                             Portfolio
-                        </p>
+                        </p><br>
+                        <p class="subtitle is-5 has-text-link">July, 2020 - Aug, 2020</p>
                     </header>
                     <div class="card-content">
                         <div class="content">
