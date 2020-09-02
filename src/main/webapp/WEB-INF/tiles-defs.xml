@@ -1,0 +1,17 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+
+    <definition name="portfolio-template" path="/jsp/layout/common-layout.jsp">
+        <put name="header" value="/jsp/layout/header.jsp" />
+        <put name="footer" value="/jsp/layout/footer.jsp" />
+    </definition>
+
+    <definition name="home-page" extends="portfolio-template">
+        <put name="styleList" value="/jsp/pages/home-styles.jsp"/>
+        <put name="body" value="/jsp/pages/home.jsp"/>
+    </definition>
+
+
+</tiles-definitions>

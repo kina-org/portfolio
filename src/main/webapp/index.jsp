@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: handakinafuchea
-  Date: 8/16/20
-  Time: 12:01 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-<jsp:forward page="jsp/home.jsp"/>]
+<% response.sendRedirect("http://localhost:8080/portfolio/home.do"); %>
 </body>
 </html>

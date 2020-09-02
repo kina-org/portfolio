@@ -12,10 +12,8 @@
 
     <action-mappings>
         <action path="/home"
-                type="com.handakina.personal.project.portfolio.web.PortfolioPageAction"
-                name="portfolioPageForm">
-            <forward name="success" path="../jsp/home.jsp/"/>
-
+                type="com.handakina.personal.project.portfolio.web.PortfolioPageAction">
+            <forward name="success" path="home-page"/>
         </action>
     </action-mappings>
 
