@@ -1,10 +1,11 @@
 #!/usr/bin/env groovy
 pipeline {
-
+    agent { docker { image 'maven:3.3.3' } }
     stages {
-        stage("Prepare") {
+        stage('build') {
             steps {
-                sh(" echo hello ")
+                sh 'mvn --version'
+                sh 'echo hello'
             }
         }
     }
