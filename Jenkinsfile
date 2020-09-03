@@ -31,7 +31,7 @@ pipeline {
                     def userInput = input(
                             id: 'userInput', message: 'Enter path of test reports:?',
                             parameters: [
-                                    [$class: 'PersistentPackageParameterDefinition', defaultValue: '', description: 'Path of config file', name: 'Config'],
+                                    [$class: 'PersistentStringParameterDefinition', defaultValue: '', description: 'Path of config file', name: 'Config'],
                                     [$class: 'TextParameterDefinition', defaultValue: '', description: 'Test Info file', name: 'Test']
                             ])
                     echo ("IQA Sheet Path: "+userInput['Config'])
