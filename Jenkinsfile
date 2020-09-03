@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
+
+library 'shared-library'
+
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent any
     stages {
         stage('build') {
             steps {
