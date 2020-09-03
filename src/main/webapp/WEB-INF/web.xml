@@ -5,6 +5,7 @@
 <web-app>
     <display-name>Handakina Portfolio</display-name>
 
+
     <servlet>
         <servlet-name>action</servlet-name>
         <servlet-class>
