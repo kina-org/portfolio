@@ -41,5 +41,15 @@ pipeline {
             }
 
         }
+        stage('password ') {
+            steps {
+                script {
+                    input message: 'enter password', parameters: [password(defaultValue: 'value', description: '', name: 'hidden')]
+
+                    println(input)
+                }
+            }
+
+        }
     }
 }
