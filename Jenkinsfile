@@ -28,7 +28,10 @@ pipeline {
         stage('Wait for user to text?') {
             steps {
                 script {
-                    def userInput = input(id: 'userInput', message: 'Merge to?')
+                    def userInput = input(id: 'userInput', message: 'Merge to?',
+                            parameters: [[$class: 'text', defaultValue: 'name',
+                                          description:'what is your name', name:'name']
+                            ])
 
                     println(userInput); //Use this value to branch to different logic if needed
                 }
