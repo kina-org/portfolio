@@ -49,15 +49,32 @@ pipeline {
                 }
             }
         }
-        stage('email ') {
+
+        stage('get file ') {
             steps {
                 script {
-                    def password = input message: 'email', parameters: [email(defaultValue: '', description: 'enter your email', name: 'email', domain:'', externalEmail:'')]
-
-                    println(password)
+                 input message: 'upload file', parameters: [file(name: 'hidden', description: '')]
 
                 }
             }
         }
+
+
+        stage('email sent ') {
+            steps {
+                script {
+                    emailext subject:'pipline job', body: 'job have been finished', to:'handakina.aws@gmail.com'
+                }
+            }
+        }
+
+        stage('clean work space ') {
+            steps {
+                script {
+                    cleanWs cleanWhenAborted:true, cleanWhenFailure:true, cleanWhenSuccess:true
+                }
+            }
+        }
+
     }
 }
