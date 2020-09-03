@@ -6,75 +6,37 @@ pipeline {
 //        user confirmation
         stage('build') {
             steps {
-                confirm()
+                confirm("do you want to start the pipeline", "Yes, continue")
             }
         }
 //        user choice
         stage('Wait for user to input text?') {
             steps {
-                script {
-                    def userInput = input(id: 'userInput', message: 'Merge to?',
-                            parameters: [[$class: 'ChoiceParameterDefinition', defaultValue: 'strDef',
-                                          description:'describing choices', name:'nameChoice', choices: "QA\nUAT\nProduction\nDevelop\nMaster"]
-                            ])
-
-                    println(userInput); //Use this value to branch to different logic if needed
-                }
+                userChice("which product", "production environments", "Devl\nQual\nProd");
             }
 
         }
         stage('Wait for user to text?') {
             steps {
-                script {
-                    def userInput = input(
-                            id: 'userInput', message: 'Enter path of test reports:?',
-                            parameters: [
-                                    [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Path of config file', name: 'Config'],
-                                    [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test']
-                            ])
-
-                    echo ("IQA Sheet Path: "+userInput['Config'])
-
-                }
+                getTextUserInput()
             }
 
         }
         stage('password ') {
             steps {
-                script {
-                    def password = input message: 'enter password', parameters: [password(defaultValue: 'value', description: '', name: 'hidden')]
-
-                    println(password)
-
-                }
+                getUserPassword()
             }
         }
 
         stage('get file ') {
             steps {
-                script {
-                 input message: 'upload file', parameters: [file(name: 'hidden', description: '')]
-
-                }
-            }
-        }
-
-
-        stage('email sent ') {
-            steps {
-                script {
-                    emailext mimeType: 'text/html', subject:'pipeline job', body: 'job have been finished',
-                            to:'handakina.aws@gmail.com', replyTo:'handakina.aws@gmail.com',
-                            recipientProviders: [[$class: 'CulpritsRecipientProvider']]
-                }
+                getFile()
             }
         }
 
         stage('clean work space ') {
             steps {
-                script {
-                    cleanWs cleanWhenAborted:true, cleanWhenFailure:true, cleanWhenSuccess:true
-                }
+                cleanWorkSpace(true, true, true)
             }
         }
 
