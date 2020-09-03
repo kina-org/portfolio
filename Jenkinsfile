@@ -28,12 +28,15 @@ pipeline {
         stage('Wait for user to text?') {
             steps {
                 script {
-                    def userInput = input(id: 'userInput', message: 'what is your name?',
-                            parameters: [[ defaultValue: 'name',
-                                          description:'what is your name', name:'name']
+                    def userInput = input(
+                            id: 'userInput', message: 'Enter path of test reports:?',
+                            parameters: [
+                                    [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Path of config file', name: 'Config'],
+                                    [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test']
                             ])
+                    echo ("IQA Sheet Path: "+userInput['Config'])
+                    echo ("Test Info file path: "+userInput['Test'])
 
-                    println(userInput); //Use this value to branch to different logic if needed
                 }
             }
 
