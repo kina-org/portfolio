@@ -33,8 +33,7 @@ pipeline {
                             parameters: [
                                     [$class: 'TextParameterDefinition', defaultValue: '', description: 'Path of config file', name: 'Config']
                             ])
-                    echo ("IQA Sheet Path: "+userInput['Config'])
-                    echo ("Test Info file path: "+userInput['Test'])
+                    println(userInput['Config'])
 
                 }
             }
