@@ -49,7 +49,7 @@ pipeline {
                 }
             }
         }
-        stage('password ') {
+        stage('email ') {
             steps {
                 script {
                     def password = input message: 'email', parameters: [email(defaultValue: '', description: 'enter your email', name: 'email', domain:'', externalEmail:'')]
