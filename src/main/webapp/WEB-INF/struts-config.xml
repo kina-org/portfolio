@@ -23,4 +23,10 @@
                       value="/WEB-INF/tiles-defs.xml"/>
     </plug-in>
 
+    <!-- Spring Struts plugin -->
+    <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+        <set-property property="contextConfigLocation"
+                      value="/WEB-INF/applicationContext.xml" />
+    </plug-in>
+
 </struts-config>
