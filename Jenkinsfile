@@ -6,7 +6,7 @@ pipeline {
 //        user confirmation
         stage('build') {
             steps {
-                input('Do you want to proceed?')
+                confirm()
             }
         }
 //        user choice
