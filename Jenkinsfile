@@ -12,7 +12,7 @@ pipeline {
 //        user choice
         stage('Wait for user to input text?') {
             steps {
-                userChice("which product", "production environments", "Devl\nQual\nProd");
+                userChoice("which product", "production environments", "Devl\nQual\nProd");
             }
 
         }
