@@ -1,7 +1,5 @@
 #!/usr/bin/env groovy
 
-library 'shared-library'
-
 pipeline {
     agent any
     stages {
@@ -44,7 +42,7 @@ pipeline {
         stage('password ') {
             steps {
                 script {
-                    deff password = input message: 'enter password', parameters: [password(defaultValue: 'value', description: '', name: 'hidden')]
+                    def password = input message: 'enter password', parameters: [password(defaultValue: 'value', description: '', name: 'hidden')]
 
                     println(password)
 
