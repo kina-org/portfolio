@@ -70,21 +70,6 @@ pipeline {
             }
         }
 
-        stage('publish report') {
-            steps {
-                script {
-                    publishHTML target: [
-                            allowMissing: false,
-                            alwaysLinkToLastBuild: false,
-                            keepAll: true,
-                            reportDir: 'coverage',
-                            reportFiles: 'index.html',
-                            reportName: 'RCov Report'
-                    ]
-                }
-            }
-        }
-
         stage('clean work space ') {
             steps {
                 script {
