@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Wait for user to text?') {
             steps {
-                getTextUserInput()
+                getUserTextInput()
             }
 
         }
