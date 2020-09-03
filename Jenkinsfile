@@ -63,7 +63,9 @@ pipeline {
         stage('email sent ') {
             steps {
                 script {
-                    emailext subject:'pipline job', body: 'job have been finished', to:'handakina.aws@gmail.com'
+                    emailext mimeType: 'text/html', subject:'pipeline job', body: 'job have been finished',
+                            to:'handakina.aws@gmail.com', replyTo:'handakina.aws@gmail.com',
+                            recipientProviders: [[$class: 'CulpritsRecipientProvider']]
                 }
             }
         }
